@@ -1,5 +1,5 @@
 module.exports = {
-	base: '/',
+	base: '/odh-hackathon-2019',
 	title: 'Ontopic Hackathon 2019',
 	themeConfig: {
 		repo: 'bcogrel/odh-hackathon-2019',
@@ -14,6 +14,8 @@ module.exports = {
 			},
 		],
 		sidebar: [
+			"",
+			"schema"
 		]
 	}
 }

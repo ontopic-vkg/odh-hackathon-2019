@@ -1,3 +1,3 @@
-# Ontopic prize - Hackathon SFScon 2019
+# Ontopic prize
 
 TODO: insert instructions
