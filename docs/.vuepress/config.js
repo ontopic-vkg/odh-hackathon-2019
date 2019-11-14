@@ -15,7 +15,9 @@ module.exports = {
 		],
 		sidebar: [
 			"",
-			"schema"
+			"schema",
+			"alexa",
+			"queries"
 		]
 	}
 }
