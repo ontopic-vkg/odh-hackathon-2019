@@ -3,21 +3,19 @@ module.exports = {
 	title: 'Ontopic Hackathon 2019',
 	themeConfig: {
 		repo: 'bcogrel/odh-hackathon-2019',
+		logo: 'ontopic.jpg',
 		nav: [
 			{
-				text: 'Odh-alexa',
-				link: 'https://github.com/ontopic-vkg/odh-alexa'
-			},
-			{
-				text: 'Alexa course',
-				link: 'https://developer.amazon.com/en-US/alexa/alexa-skills-kit/resources/training-resources/cake-walk'
-			},
+				text: 'Ontopic',
+				link: 'https://ontopic.biz'
+			}
 		],
 		sidebar: [
 			"",
-			"schema",
+			"setup",
 			"alexa",
-			"queries"
+			"queries",
+			"schema"
 		]
 	}
 }

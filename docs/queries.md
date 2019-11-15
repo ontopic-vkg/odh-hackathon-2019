@@ -1,5 +1,7 @@
 # ODH VKG SPARQL Queries
 
+Here are some queries you can try by visiting [your local SPARQL endpoint](http://localhost:8080) or the [testing endpoint of the ODH-VKG project](https://sparql.opendatahub.testingmachine.eu/)
+
 ### Lodging businesses
 *Limited to 500 results for demonstrational purposes*
 ```sql
@@ -138,6 +140,10 @@ WHERE {
 
 ### Food establishments
 *Limited to 500 results for demonstrational purposes*
+
+NB: food establishments may not have been yet deployed on the public SPARQL endpoint of the ODH-VKG project. Please use your local endpoint.  
+
+
 ```sql
 PREFIX schema: <http://schema.org/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
@@ -173,6 +179,9 @@ LIMIT 500
 ```
 
 ### Restaurants above 1500m
+
+NB: food establishments may not have been yet deployed on the public SPARQL endpoint of the ODH-VKG project. Please use your local endpoint.
+
 ```sql
 PREFIX schema: <http://schema.org/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
