@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ODH VKG SPARQL Queries | Ontopic Hackathon 2019</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/odh-hackathon-2019/assets/css/0.styles.21c559a5.css" as="style"><link rel="preload" href="/odh-hackathon-2019/assets/js/app.04a1ee5f.js" as="script"><link rel="preload" href="/odh-hackathon-2019/assets/js/2.75f40d00.js" as="script"><link rel="preload" href="/odh-hackathon-2019/assets/js/7.56825bf4.js" as="script"><link rel="prefetch" href="/odh-hackathon-2019/assets/js/10.d77f1660.js"><link rel="prefetch" href="/odh-hackathon-2019/assets/js/3.c81f9c33.js"><link rel="prefetch" href="/odh-hackathon-2019/assets/js/4.d44d61c3.js"><link rel="prefetch" href="/odh-hackathon-2019/assets/js/5.b30cd214.js"><link rel="prefetch" href="/odh-hackathon-2019/assets/js/6.df9665bd.js"><link rel="prefetch" href="/odh-hackathon-2019/assets/js/8.4e89b75e.js"><link rel="prefetch" href="/odh-hackathon-2019/assets/js/9.549bd738.js">
+    <link rel="stylesheet" href="/odh-hackathon-2019/assets/css/0.styles.21c559a5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/odh-hackathon-2019/" class="home-link router-link-active"><img src="ontopic.jpg" alt="Ontopic Hackathon 2019" class="logo"> <span class="site-name can-hide">Ontopic Hackathon 2019</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://ontopic.biz" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ontopic
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/bcogrel/odh-hackathon-2019" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://ontopic.biz" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ontopic
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/bcogrel/odh-hackathon-2019" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/odh-hackathon-2019/" class="sidebar-link">Ontopic prize</a></li><li><a href="/odh-hackathon-2019/setup.html" class="sidebar-link">Environment setup</a></li><li><a href="/odh-hackathon-2019/alexa.html" class="sidebar-link">Alexa Skill Development</a></li><li><a href="/odh-hackathon-2019/queries.html" class="active sidebar-link">ODH VKG SPARQL Queries</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/odh-hackathon-2019/schema.html" class="sidebar-link">Schema of the ODH VKG</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="odh-vkg-sparql-queries"><a href="#odh-vkg-sparql-queries" aria-hidden="true" class="header-anchor">#</a> ODH VKG SPARQL Queries</h1> <p>Here are some queries you can try by visiting <a href="http://localhost:8080" target="_blank" rel="noopener noreferrer">your local SPARQL endpoint<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> or the <a href="https://sparql.opendatahub.testingmachine.eu/" target="_blank" rel="noopener noreferrer">testing endpoint of the ODH-VKG project<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="lodging-businesses"><a href="#lodging-businesses" aria-hidden="true" class="header-anchor">#</a> Lodging businesses</h3> <p><em>Limited to 500 results for demonstrational purposes</em></p> <div class="language-sql extra-class"><pre class="language-sql"><code>PREFIX <span class="token keyword">schema</span>: <span class="token operator">&lt;</span>http:<span class="token comment">//schema.org/&gt;</span>
+PREFIX geo: <span class="token operator">&lt;</span>http:<span class="token comment">//www.opengis.net/ont/geosparql#&gt;</span>
+
+<span class="token keyword">SELECT</span> ?h ?pos ?posLabel ?posColor 
+<span class="token keyword">WHERE</span> {
+  ?h a <span class="token keyword">schema</span>:LodgingBusiness <span class="token punctuation">;</span> 
+     geo:asWKT ?pos <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:name ?posLabel <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:address ?a <span class="token punctuation">.</span>
+  <span class="token comment"># ?a schema:postalCode &quot;39100&quot; . # Uncomment for Bolzano only</span>
+  FILTER <span class="token punctuation">(</span>lang<span class="token punctuation">(</span>?posLabel<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">'de'</span><span class="token punctuation">)</span>
+  
+  <span class="token comment"># Colors</span>
+  OPTIONAL {
+    ?h a <span class="token keyword">schema</span>:Campground <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;chlorophyll,0.5&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Green</span>
+  }
+    OPTIONAL {
+    ?h a <span class="token keyword">schema</span>:BedAndBreakfast <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;viridis,0.1&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Purple</span>
+  }
+  OPTIONAL {
+    ?h a <span class="token keyword">schema</span>:Hotel <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;jet,0.3&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Light blue</span>
+  }
+  OPTIONAL {
+    ?h a <span class="token keyword">schema</span>:Hostel <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;jet,0.8&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Red</span>
+  }
+}
+<span class="token keyword">LIMIT</span> <span class="token number">500</span>
+</code></pre></div><h3 id="biggest-lodging-businesses"><a href="#biggest-lodging-businesses" aria-hidden="true" class="header-anchor">#</a> Biggest lodging businesses</h3> <p><em>Limited to 50 results for demonstrational purposes</em></p> <div class="language-sql extra-class"><pre class="language-sql"><code>PREFIX geo: <span class="token operator">&lt;</span>http:<span class="token comment">//www.opengis.net/ont/geosparql#&gt;</span>
+PREFIX <span class="token keyword">schema</span>: <span class="token operator">&lt;</span>http:<span class="token comment">//schema.org/&gt;</span>
+PREFIX : <span class="token operator">&lt;</span>http:<span class="token comment">//noi.example.org/ontology/odh#&gt;</span>
+
+<span class="token keyword">SELECT</span> ?pos ?posColor ?bName
+      <span class="token punctuation">(</span><span class="token function">SUM</span><span class="token punctuation">(</span>?nb<span class="token punctuation">)</span> <span class="token keyword">AS</span> ?countRoom<span class="token punctuation">)</span> 
+      <span class="token punctuation">(</span><span class="token function">SUM</span><span class="token punctuation">(</span>?maxPersons<span class="token punctuation">)</span> <span class="token keyword">AS</span> ?countMaxPersons<span class="token punctuation">)</span> 
+      <span class="token punctuation">(</span>CONCAT<span class="token punctuation">(</span>?bName<span class="token punctuation">,</span> <span class="token string">': '</span><span class="token punctuation">,</span> str<span class="token punctuation">(</span>?countRoom<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">' accommodations, max '</span><span class="token punctuation">,</span> str<span class="token punctuation">(</span>?countMaxPersons<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">' guests'</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ?posLabel<span class="token punctuation">)</span>  
+<span class="token keyword">WHERE</span> {
+  ?b a <span class="token keyword">schema</span>:LodgingBusiness <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:name ?bName <span class="token punctuation">;</span> 
+     geo:asWKT ?pos <span class="token punctuation">.</span>
+  
+  ?r a <span class="token keyword">schema</span>:Accommodation <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:containedInPlace ?b <span class="token punctuation">;</span> 
+     :numberOfUnits ?nb <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:occupancy <span class="token punctuation">[</span> <span class="token keyword">schema</span>:maxValue ?maxOccupancyPerRoom <span class="token punctuation">]</span> <span class="token punctuation">.</span>
+  
+  <span class="token comment"># ?b schema:address [ schema:postalCode &quot;39100&quot; ] # For Bolzano only</span>
+  
+  BIND <span class="token punctuation">(</span>?nb <span class="token operator">*</span> ?maxOccupancyPerRoom <span class="token keyword">AS</span> ?maxPersons<span class="token punctuation">)</span>
+  FILTER <span class="token punctuation">(</span>lang<span class="token punctuation">(</span>?bName<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">'en'</span><span class="token punctuation">)</span>
+  
+  <span class="token comment"># Colors</span>
+  OPTIONAL {
+    ?b a <span class="token keyword">schema</span>:Campground <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;chlorophyll,0.5&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Green</span>
+  }
+  OPTIONAL {
+    ?b a <span class="token keyword">schema</span>:BedAndBreakfast <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;viridis,0.1&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Purple</span>
+  }
+  OPTIONAL {
+    ?b a <span class="token keyword">schema</span>:Hotel <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;jet,0.3&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Light blue</span>
+  }
+  OPTIONAL {
+    ?b a <span class="token keyword">schema</span>:Hostel <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;jet,0.8&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Red</span>
+  }
+} 
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> ?b ?bName ?pos ?posColor
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> <span class="token keyword">DESC</span><span class="token punctuation">(</span>?countRoom<span class="token punctuation">)</span>
+<span class="token keyword">LIMIT</span> <span class="token number">50</span>
+</code></pre></div><h3 id="number-of-lodging-businesses"><a href="#number-of-lodging-businesses" aria-hidden="true" class="header-anchor">#</a> Number of lodging businesses</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>PREFIX <span class="token keyword">schema</span>: <span class="token operator">&lt;</span>http:<span class="token comment">//schema.org/&gt;</span>
+
+<span class="token keyword">SELECT</span> <span class="token punctuation">(</span><span class="token function">COUNT</span><span class="token punctuation">(</span>?h<span class="token punctuation">)</span> <span class="token keyword">AS</span> ?count<span class="token punctuation">)</span> 
+<span class="token keyword">WHERE</span> {
+  ?h a <span class="token keyword">schema</span>:LodgingBusiness 
+}
+</code></pre></div><h3 id="number-of-lodging-businesses-in-bolzano"><a href="#number-of-lodging-businesses-in-bolzano" aria-hidden="true" class="header-anchor">#</a> Number of lodging businesses in Bolzano</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>PREFIX <span class="token keyword">schema</span>: <span class="token operator">&lt;</span>http:<span class="token comment">//schema.org/&gt;</span>
+
+<span class="token keyword">SELECT</span> <span class="token punctuation">(</span><span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token keyword">DISTINCT</span> ?h<span class="token punctuation">)</span> <span class="token keyword">AS</span> ?count<span class="token punctuation">)</span> 
+<span class="token keyword">WHERE</span> {
+  ?h a <span class="token keyword">schema</span>:LodgingBusiness <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:address ?a <span class="token punctuation">.</span>
+  ?a <span class="token keyword">schema</span>:postalCode <span class="token string">&quot;39100&quot;</span> <span class="token punctuation">.</span>
+}
+</code></pre></div><h3 id="ski-areas-in-the-region-with-a-custom-label"><a href="#ski-areas-in-the-region-with-a-custom-label" aria-hidden="true" class="header-anchor">#</a> Ski areas in the region with a custom label</h3> <p><em>In this query the label of the marker for each ski area also contains an image showing the routes.
+This means that when you visualize the query results in the map, for each map marker there will be an associated image. This is done via the bind command (last lines).</em></p> <div class="language-sql extra-class"><pre class="language-sql"><code>PREFIX : <span class="token operator">&lt;</span>http:<span class="token comment">//noi.example.org/ontology/odh#&gt;</span>
+PREFIX geo: <span class="token operator">&lt;</span>http:<span class="token comment">//www.opengis.net/ont/geosparql#&gt;</span>
+PREFIX <span class="token keyword">schema</span>: <span class="token operator">&lt;</span>http:<span class="token comment">//schema.org/&gt;</span>
+
+<span class="token keyword">SELECT</span> ?pos ?posLabel 
+<span class="token keyword">WHERE</span> {
+  ?s a <span class="token keyword">schema</span>:SkiResort <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:name ?name <span class="token punctuation">;</span> 
+     geo:asWKT ?pos <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:geo <span class="token punctuation">[</span> <span class="token keyword">schema</span>:elevation ?maxElevation <span class="token punctuation">]</span> <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:image ?img <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:isPartOf ?skiRegion<span class="token punctuation">.</span> 
+  
+  ?skiRegion a :SkiRegion <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:name ?regionName<span class="token punctuation">.</span>
+
+  BIND<span class="token punctuation">(</span>concat<span class="token punctuation">(</span>
+      <span class="token string">'&lt;h3&gt;'</span><span class="token punctuation">,</span>str<span class="token punctuation">(</span>?name<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">' &lt;/h3&gt;'</span><span class="token punctuation">,</span>
+      ?regionName<span class="token punctuation">,</span>
+      <span class="token string">', max elevation: '</span><span class="token punctuation">,</span> str<span class="token punctuation">(</span>?maxElevation<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">' m '</span><span class="token punctuation">,</span>
+      <span class="token string">'&lt;img src=&quot;'</span><span class="token punctuation">,</span>str<span class="token punctuation">(</span>?img<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'&quot; height=&quot;300&quot; width=&quot;300&quot;&gt;'</span>
+    <span class="token punctuation">)</span> <span class="token keyword">as</span> ?posLabel<span class="token punctuation">)</span>
+}
+</code></pre></div><h3 id="food-establishments"><a href="#food-establishments" aria-hidden="true" class="header-anchor">#</a> Food establishments</h3> <p><em>Limited to 500 results for demonstrational purposes</em></p> <p>NB: food establishments may not have been yet deployed on the public SPARQL endpoint of the ODH-VKG project. Please use your local endpoint.</p> <div class="language-sql extra-class"><pre class="language-sql"><code>PREFIX <span class="token keyword">schema</span>: <span class="token operator">&lt;</span>http:<span class="token comment">//schema.org/&gt;</span>
+PREFIX geo: <span class="token operator">&lt;</span>http:<span class="token comment">//www.opengis.net/ont/geosparql#&gt;</span>
+
+<span class="token keyword">SELECT</span> ?e ?pos ?posLabel ?posColor 
+<span class="token keyword">WHERE</span> {
+  ?e a <span class="token keyword">schema</span>:FoodEstablishment <span class="token punctuation">;</span> 
+     geo:asWKT ?pos <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:name ?posLabel <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:address ?a <span class="token punctuation">.</span>
+  <span class="token comment"># ?a schema:postalCode &quot;39100&quot; . # Uncomment for Bolzano only</span>
+  FILTER <span class="token punctuation">(</span>lang<span class="token punctuation">(</span>?posLabel<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">'de'</span><span class="token punctuation">)</span>
+  
+  <span class="token comment"># Colors (with priority)</span>
+  OPTIONAL {
+    ?e a <span class="token keyword">schema</span>:Restaurant <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;jet,0.3&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Light blue</span>
+  }
+  OPTIONAL {
+    ?e a <span class="token keyword">schema</span>:BarOrPub <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;chlorophyll,0.5&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Green</span>
+  }
+  OPTIONAL {
+    ?e a <span class="token keyword">schema</span>:Winery <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;viridis,0.1&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Purple</span>
+  }
+  OPTIONAL {
+    ?e a <span class="token keyword">schema</span>:FastFoodRestaurant <span class="token punctuation">.</span>
+    BIND<span class="token punctuation">(</span><span class="token string">&quot;jet,0.8&quot;</span> <span class="token keyword">AS</span> ?posColor<span class="token punctuation">)</span> <span class="token comment"># Red</span>
+  }
+}
+<span class="token keyword">LIMIT</span> <span class="token number">500</span>
+</code></pre></div><h3 id="restaurants-above-1500m"><a href="#restaurants-above-1500m" aria-hidden="true" class="header-anchor">#</a> Restaurants above 1500m</h3> <p>NB: food establishments may not have been yet deployed on the public SPARQL endpoint of the ODH-VKG project. Please use your local endpoint.</p> <div class="language-sql extra-class"><pre class="language-sql"><code>PREFIX <span class="token keyword">schema</span>: <span class="token operator">&lt;</span>http:<span class="token comment">//schema.org/&gt;</span>
+PREFIX geo: <span class="token operator">&lt;</span>http:<span class="token comment">//www.opengis.net/ont/geosparql#&gt;</span>
+
+<span class="token keyword">SELECT</span> ?e 
+       ?pos 
+       <span class="token punctuation">(</span>CONCAT<span class="token punctuation">(</span>?name<span class="token punctuation">,</span> <span class="token string">&quot; (&quot;</span><span class="token punctuation">,</span> str<span class="token punctuation">(</span>?altitude<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot; m)&quot;</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ?posLabel<span class="token punctuation">)</span> 
+       ?posColor 
+<span class="token keyword">WHERE</span> {
+  ?e a <span class="token keyword">schema</span>:Restaurant<span class="token punctuation">;</span> 
+     geo:asWKT ?pos <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:name ?name <span class="token punctuation">;</span> 
+     <span class="token keyword">schema</span>:geo ?geo <span class="token punctuation">.</span>
+  ?geo <span class="token keyword">schema</span>:elevation ?altitude <span class="token punctuation">.</span>
+  FILTER <span class="token punctuation">(</span>lang<span class="token punctuation">(</span>?name<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">'de'</span><span class="token punctuation">)</span>
+  FILTER <span class="token punctuation">(</span>?altitude <span class="token operator">&gt;=</span> <span class="token number">1500</span><span class="token punctuation">)</span>
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/odh-hackathon-2019/alexa.html" class="prev">
+          Alexa Skill Development
+        </a></span> <span class="next"><a href="/odh-hackathon-2019/schema.html">
+          Schema of the ODH VKG
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/odh-hackathon-2019/assets/js/app.04a1ee5f.js" defer></script><script src="/odh-hackathon-2019/assets/js/2.75f40d00.js" defer></script><script src="/odh-hackathon-2019/assets/js/7.56825bf4.js" defer></script>
+  </body>
+</html>
