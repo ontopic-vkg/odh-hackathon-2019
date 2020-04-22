@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   db:
-    image: ontopicvkg/odh-tourism-db
+    image: ontopicvkg/odh-tourism-db:1.0
     restart: unless-stopped
     ports:
       - "${PG_DOCKER_PORT}:5432"
