@@ -1,8 +1,8 @@
 module.exports = {
-	base: '/odh-hackathon-2019',
+	base: '/odh-hackathon-2019/',
 	title: 'Ontopic Hackathon 2019',
 	themeConfig: {
-		repo: 'bcogrel/odh-hackathon-2019',
+		repo: 'geriskenderi/odh-hackathon-2019',
 		logo: 'ontopic.jpg',
 		nav: [
 			{
